@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root{
+    --azul-principal: #96B6C5;
+    --azul-claro: #ADC4CE;
+    --creme: #EEE0C9;
+    --amarelo: #F1F0E8;
+    --vermelho-claro: #FF6666;
+}
+
+::placeholder{
+    color: var(--creme);
+}
+
+body{
+    background: var(--azul-principal);
+    font-family: 'Roboto', sans-serif;
+}
+
+*:focus{
+    outline: none;
+}
+
+h1{
+    font-weight: 900;
+    color: var(--creme);
+    text-align: center;
+}
+
+form{
+    display: flex;
+    position: relative;
+    width: 600px;
+    height: 60px;
+    margin: 30px auto;
+    margin-bottom: 60px;
+}
+
+input{
+    display: flex;
+    width: 100%;
+    height: 60px;
+    background: var(--azul-claro);
+    border: none;
+    padding-left: 30px;
+    font-size: 16px;
+    border-radius: 10px;
+    color: var(--creme);
+}
+
+button.add{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: var(--creme);
+    border: none;
+    color: var(--azul-principal);
+    cursor: pointer;
+    padding: 10px 25px;
+    height: 62px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+button.add:hover{
+    background: var(--vermelho-claro);
+    color: var(--creme);
+}
+
+.lista__tarefas{
+    display: flex;
+    justify-content: center;
+    flex-flow: column wrap;
+    width: 600px;
+    margin: auto;
+}
+
+.item{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid var(--creme);
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.item:hover{
+    background: var(--azul-claro);
+}
+
+.item span{
+    text-align: start;
+    width: 100%;
+    color: var(--creme);
+    margin-right: 10px;
+    padding: 10px 15px;
+}
+
+.item.completo{
+    display: flex;
+    justify-content: space-between;
+    background: var(--azul-claro);
+    border: none;
+    margin-bottom: 10px;
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.item.completo span{
+    text-align: start;
+    width: 100%;
+    color: var(--amarelo);
+    margin-right: 10px;
+    padding: 10px 15px;
+    text-decoration: line-through;
+}
+
+button.del{
+    background: none;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    color: var(--amarelo);
+}
+
+button.del:hover{
+    background: var(--vermelho-claro);
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    color: white;
+}
+
+button.deleteall{
+    border: 1px solid;
+    background: none;
+    padding: 15px;
+    color: var(--vermelho-claro);
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+button.deleteall:hover{
+    background: var(--vermelho-claro);
+    color: white;
+    cursor: pointer;
+}
+
+.icone__central{
+    max-width: 100%;
+    width: 400px;
+}
+
+@media screen and (max-width: 900px){
+    form{
+        width: 100%;
+    }
+
+    .lista__tarefas{
+        width: 100%;
+    }
+}
